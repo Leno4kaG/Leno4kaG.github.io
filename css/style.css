@@ -35,28 +35,28 @@ html {
 
   body {
     margin: 0;
+    background-color: #f8f8f8;
     overflow-x: hidden;  
     }  
 
  .container {
   padding: 0;
   margin: 0 auto;
-  width: 320px;
+  min-width: 320px;
    }
 
    @media (min-width: 768px) {
    .container {
     padding: 0;
-        width: 768px;
+       min-width: 768px;
      }
     }
 
  @media (min-width: 1120px) {
   .container {
     padding: 0;
-    width: 1120px;
-   
-  }
+   width: 1120px;
+     }
 }
 
 .header {
@@ -69,13 +69,10 @@ html {
 .header__container {
   margin: 0;
   padding: 0;
-        min-width: 320px;
-    height: 88px;
-    display: flex;
-    justify-content: center;
-   align-items: center;
-   margin: 0 auto;
-   border-bottom: 1px solid #D9FFF5;
+       display: flex;
+       align-items: center;
+      border-bottom: 1px solid #D9FFF5;
+padding: 0;
                 }
         
       @media (min-width: 768px) {
@@ -87,9 +84,15 @@ html {
        @media (min-width: 1120px) {
         .header__container{         
           display: none;
-                 
+                
      }
        }
+
+       .menu {                
+        display: flex;
+        align-items: center; 
+                
+    }
                 
     .menu__menu-button {
         margin: 0;
@@ -108,15 +111,8 @@ html {
         .menu__menu-button {
         margin-left: 24px;
        }
-      }      
-
-       @media (min-width: 768px) {
-        .menu {                
-            display: flex;
-            align-items: center; 
-                      
-        }
-    }
+      } 
+   
 
 @media (min-width: 768px) {
     .menu.is-divider::after {
@@ -130,15 +126,19 @@ html {
   margin-right: 21px;
     }
 } 
-
+.logo {
+  flex-grow: 1;
+}
   .logo__logo-icon {
     padding: 0;
     margin: 0;
+    display: flex;
     width: 97px;
     height: 51px;
     margin-top: 19px;
-    margin-bottom: 19px;
+    margin-bottom: 18px;
     margin-right: 17px;
+   
  }
 
  @media (min-width: 768px) {
@@ -157,7 +157,7 @@ html {
         margin: 0;
         display: flex;
         align-items: center;
-        
+        flex-grow: 0;
     }
 }
 
@@ -184,7 +184,8 @@ html {
     .chat {
         margin: 0;
     display: flex;
-    align-items: center; }
+    align-items: center;
+    flex-grow: 0; }
 }
 
  @media (min-width: 768px) {
@@ -211,6 +212,7 @@ html {
         margin: 0;
         display: flex;
         align-items: center;
+        flex-grow: 0;
     }
 }
 
@@ -232,6 +234,7 @@ html {
     margin: 0;
     display: flex;
     align-items: center; 
+    flex-grow: 0;
     }
 
 .repair.is-divider::before {
@@ -265,6 +268,8 @@ html {
     margin-top: 24px;
     margin-bottom: 24px;
     margin-right: 16px; 
+    display: flex;
+    flex-grow: 1;
           }
 
           @media (min-width: 768px) {
@@ -444,22 +449,21 @@ html {
             padding: 0;
             margin: 0;
             margin-left: 16px;
-            height: 40px;
-            margin-bottom: 24px;
+           
+           
            
                }
 
           @media (min-width: 768px) {
             .navigation {
               margin-left: 24px;
-              margin-bottom: 32px;
+             
             } 
            }
 
            @media (min-width: 1120px) {
             .navigation {
-              margin: 0;
-              padding: 0;
+                    
                 display: flex;
               align-items: center;
               margin-left: 32px;
@@ -482,7 +486,7 @@ html {
           display: flex;
     flex-wrap: wrap;
     margin-left: 0;
-    padding: 0;
+        padding: 0;
   }
   }
 
@@ -616,7 +620,9 @@ html {
                }           
 
              @media (min-width: 1120px) {
-              .navigation__button-three {                         
+              .navigation__button-three {   
+                padding-top: 6px;
+              padding-bottom: 6px;                      
                padding-left: 19px;
               padding-right: 15px;
              margin-right: 0;
@@ -690,7 +696,8 @@ html {
           gap: 0 36px;
           margin-top: 36px;
           margin-left: 34px; 
-          padding-bottom: 49px;         
+          padding-bottom: 49px;  
+          padding-top: 16px;       
         }
       }
           
@@ -746,13 +753,7 @@ html {
    }
   }
 
-  @media (min-width: 1120px) {
-    .blok_ferst__text-btn {
-      width: 50%;
-    }
-  }
-
-     .readMore {
+      .readMore {
     padding: 0;
    margin: 0;   
    width: 132px;
@@ -792,23 +793,22 @@ html {
     .picture {
       padding: 0;
       margin: 0;
-      margin-left: auto;
-      margin-right: auto;
-      width: fit-content;        
+      width: 320px;
+      height: 184px;        
     }
    
     @media (min-width: 768px) {
       .picture {
-        width: 50%;
-        min-width: 360px;
-        height: 207px;
+        
+        width: 360px;
+    height: 207px;
       }
     }
 
     @media (min-width: 1120px) {
-      .picture {
+      .picture {  
        
-       min-width: 532px;
+       min-width: 531px;
         height: 307px;
       }
     }
@@ -817,9 +817,10 @@ html {
       border-radius: 0px;
       width: 100%;     
     }
+
     @media (min-width: 768px) {
     .picture__logo {
       border-radius: 6px;
     }    
-    }
+    }  
          
